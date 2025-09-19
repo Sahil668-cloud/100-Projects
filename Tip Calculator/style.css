@@ -1,0 +1,185 @@
+/* Office blue/white theme, responsive, with subtle animations and improved text styling */
+
+:root {
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --background: #f8fafc;
+    --white: #fff;
+    --border: #e5e7eb;
+    --shadow: 0 4px 24px rgba(37, 99, 235, 0.07);
+}
+body::-webkit-scrollbar{
+    width: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+h1 {
+    color: var(--primary);
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-align: center;
+    animation: slideDown 0.7s;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 8px rgba(37,99,235,0.07);
+}
+
+form#tipForm {
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    padding: 2rem 2.5rem;
+    min-width: 320px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    animation: popIn 0.7s;
+    border: 1px solid var(--border);
+}
+
+label {
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.2px;
+    font-size: 1.05rem;
+}
+
+input[type="number"] {
+    width: 90%;
+    margin: auto;
+    padding: 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    transition: border-color 0.2s;
+    background: var(--background);
+    color: #222;
+    font-weight: 500;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary);
+    outline: none;
+    background: #e0e7ff;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 0.7rem;
+    padding: 1rem;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    animation: fadeIn 1.2s;
+}
+
+legend {
+    color: var(--primary);
+    font-weight: 700;
+    padding: 0 0.5rem;
+    font-size: 1.08rem;
+    letter-spacing: 0.2px;
+}
+
+fieldset label {
+    color: #222;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+fieldset label:hover {
+    color: var(--primary-light);
+}
+
+input[type="radio"] {
+    accent-color: var(--primary);
+    transition: accent-color 0.2s;
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.9rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background: var(--primary-light);
+    transform: translateY(-2px) scale(1.03);
+}
+
+#result {
+    min-height: 2.5rem;
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+    animation: fadeIn 1.2s;
+    letter-spacing: 0.2px;
+    background: #e0e7ff33;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.95);}
+    100% { opacity: 1; transform: scale(1);}
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    form#tipForm {
+        padding: 1.2rem 0.7rem;
+        min-width: unset;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    #result {
+        font-size: 1.05rem;
+        padding: 0.5rem 0.5rem;
+    }
+}

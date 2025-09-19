@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Tip Calculator</h1>
+    <form id="tipForm">
+        <label for="billAmount">Bill Amount:</label>
+        <input type="number" id="billAmount" name="billAmount" min="0" step="10" required>
+
+        <fieldset>
+            <legend>Select Tip Percentage:</legend>
+            <label>
+                <input type="radio" name="tipPercent" value="0.05" required> Poor
+            </label>
+            <label>
+                <input type="radio" name="tipPercent" value="0.10"> Good
+            </label>
+            <label>
+                <input type="radio" name="tipPercent" value="0.15"> Average
+            </label>
+            <label>
+                <input type="radio" name="tipPercent" value="0.20"> Excellent
+            </label>
+        </fieldset>
+
+        <button type="submit">Calculate Tip</button>
+        <div id="result"></div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
