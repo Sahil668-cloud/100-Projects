@@ -71,7 +71,7 @@ p {
     width: 100%;
     object-fit: cover;
     display: block;
-    height: 220px;
+    height: 300px;
     max-height: 220px;
     margin: 0;
     padding: 0;
@@ -94,7 +94,7 @@ p {
         width: 220px;
     }
     .img img {
-        height: 140px;
+        height: 300px;
     }
 }
 
@@ -109,7 +109,7 @@ p {
         margin: 0 auto;
     }
     .img img {
-        height: 120px;
+        height: 350px;
     }
     h1 {
         font-size: 1.5rem;
