@@ -1,5 +1,5 @@
 const supercars = [
-    { name: "Ferrari LaFerrari", image: "Ferrari LaFerrari.jpg" },
+    { name: "Ferrari LaFerrari", image: "Ferrari%20LaFerrari.jpg" },
     { name: "Bugatti Chiron", image: "Bugatti Chiron.jpg" },
     { name: "Lamborghini Aventador", image: "Lamborghini Aventador.jpg" },
     { name: "McLaren P1", image: "McLaren P1.jpg" },
@@ -32,4 +32,5 @@ for (let car = 0; car < supercars.length; car++) {
     `;
 
 }
+
 
