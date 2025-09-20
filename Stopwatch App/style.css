@@ -1,0 +1,130 @@
+body {
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    color: #39ff14;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+    animation: fadeInDown 1s;
+}
+
+#stopwatch {
+    background: rgba(15, 32, 39, 0.95);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 5px #00fff7, 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: popIn 1s;
+    border: 2px solid #39ff14;
+}
+
+#time {
+    font-size: 3rem;
+    color: #00fff7;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow:
+        0 0 10px #00fff7,
+        0 0 20px #39ff14,
+        0 2px 8px #222;
+    animation: pulse 2s infinite;
+}
+
+button {
+    background: linear-gradient(90deg, #39ff14 0%, #00fff7 100%);
+    color: #222;
+    border: none;
+    outline: none;
+    padding: 12px 28px;
+    margin: 0 8px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 16px #00fff7, 0 4px 16px rgba(0, 255, 247, 0.15);
+    transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+    animation: fadeInUp 1s;
+    text-shadow: 0 0 8px #fff, 0 0 16px #39ff14;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 32px #39ff14, 0 8px 24px rgba(0, 255, 247, 0.25);
+    background: linear-gradient(90deg, #00fff7 0%, #39ff14 100%);
+    color: #fff;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#start{
+    display: block;
+}
+#stop{
+    display: none;
+}
+#reset{
+    display: none;
+}
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8);}
+    100% { opacity: 1; transform: scale(1);}
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow:
+            0 0 10px #00fff7,
+            0 0 20px #39ff14,
+            0 2px 8px #222;
+    }
+    50% {
+        text-shadow:
+            0 0 20px #39ff14,
+            0 0 40px #00fff7,
+            0 2px 16px #00fff7;
+    }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    #stopwatch {
+        padding: 25px 10px;
+    }
+    #time {
+        font-size: 2rem;
+    }
+    button {
+        padding: 10px 16px;
+        font-size: 1rem;
+        margin: 0 4px;
+    }
+}
