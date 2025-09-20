@@ -26,8 +26,9 @@ for (let car = 0; car < supercars.length; car++) {
     const element = supercars[car];
     gallery.innerHTML += `
         <div class="img">
-            <img src="supercars/${element.image}" alt="${element.name}" width="300">
+            <img src="supercars/${element.image}" alt="${element.name}" width="300" loading="lazy">
             <h2>${element.name}</h2>
         </div>
     `;
+
 }
