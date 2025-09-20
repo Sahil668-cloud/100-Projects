@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.img {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 320px;
+    text-align: center;
+}
+
+.img:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 32px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.img {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 220px;
+    max-height: 220px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.img h2 {
+    margin: 16px 0;
+    font-size: 1.25rem;
+    color: #0078d7;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        gap: 20px;
+        padding: 12px;
+    }
+    .img {
+        width: 220px;
+    }
+    .img img {
+        height: 140px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        gap: 12px;
+        padding: 4px;
+    }
+    .img {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .img img {
+        height: 120px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+body::-webkit-scrollbar{
+    width: 0;
+}
