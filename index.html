@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All My 100 Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+        }
+
+        li:hover {
+            background: #007BFF;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: 0.5s ease-in-out;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>All My 100 Projects</h1>
+    <ul id="project-list">
+
+    </ul>
+    <script>
+        let list = document.getElementById('project-list');
+        const projects = [
+            "Personal Bio Page",
+            "Color Palette Display",
+            "Digital Clock",
+            "HTML Form Page",
+            "To-Do List (Basic)",
+            "Responsive Navbar",
+            "Counter App",
+            "Background Color Changer",
+            "Basic Portfolio (Static)",
+            "Tip Calculator",
+            "Image Gallery",
+            "Stopwatch App",
+            "Password Strength Checker"]
+
+        for (let i = 0; i < projects.length; i++) {
+            list.insertAdjacentHTML('beforeend', `<li><a href="https://sahil668-cloud.github.io/100-Projects/${projects[i]}" target="_blank">Project ${i + 1}: ${projects[i]}</a></li>`);
+        }
+    </script>
+</body>
+
+</html>
