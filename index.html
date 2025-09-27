@@ -4,108 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All My 100 Projects</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-            margin-top: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-
-        }
-
-        @media screen and (max-width: 600px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        li {
-            background: #fff;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s;
-            cursor: pointer;
-            transition: 0.5s ease-in-out;
-        }
-
-        li:hover {
-            background: #007BFF;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: 0.5s ease-in-out;
-        }
-
-        a:hover {
-            color: #fff;
-        }
-    </style>
+    <title>Quiz App</title>
+    <!-- ✅ Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body>
-    <h1>All My 100 Projects</h1>
-    <ul id="project-list">
+<body class="min-h-screen bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center p-4">
 
-    </ul>
-    <script>
-        let list = document.getElementById('project-list');
-        const projects = [
-            "Personal Bio Page",
-            "Color Palette Display",
-            "Digital Clock",
-            "HTML Form Page",
-            "To-Do List (Basic)",
-            "Responsive Navbar",
-            "Counter App",
-            "Background Color Changer",
-            "Basic Portfolio (Static)",
-            "Tip Calculator",
-            "Image Gallery",
-            "Stopwatch App",
-            "Password Strength Checker",
-            "Weather Card (Static)"]
+    <div
+        class="quiz-container bg-white shadow-2xl rounded-2xl p-6 sm:p-8 w-full max-w-md sm:max-w-lg text-center transition-all duration-300">
 
-        for (let i = 0; i < projects.length; i++) {
-            list.insertAdjacentHTML('beforeend', `<li><a href="https://sahil668-cloud.github.io/100-Projects/${projects[i]}" target="_blank">Project ${i + 1}: ${projects[i]}</a></li>`);
-        }
-    </script>
+        <!-- Header -->
+        <h1 class="text-2xl sm:text-3xl font-bold text-blue-600 mb-6">Quiz App (Basic)</h1>
+
+        <!-- Quiz Form -->
+        <form id="quizForm" class="space-y-6">
+            <p id="question" class="text-base sm:text-lg font-medium text-gray-800">Loading question...</p>
+
+            <!-- Options -->
+            <div id="options" class="grid grid-cols-1 gap-3 text-left"></div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full py-2 sm:py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+                Submit
+            </button>
+        </form>
+
+        <!-- Result Screen -->
+        <div id="resultContainer" class="hidden mt-6 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Your Result</h2>
+
+            <div class="flex justify-center mb-4">
+                <svg id="ringChart" width="130" height="130">
+                    <circle cx="65" cy="65" r="55" stroke="#e5e7eb" stroke-width="12" fill="none" />
+                    <circle id="ringProgress" cx="65" cy="65" r="55" stroke="#3b82f6" stroke-width="12" fill="none"
+                        stroke-linecap="round" stroke-dasharray="345" stroke-dashoffset="345"
+                        transform="rotate(-90 65 65)" />
+                </svg>
+            </div>
+
+            <p id="scoreText" class="text-lg sm:text-xl font-medium text-gray-700"></p>
+
+            <button onclick="restartQuiz()"
+                class="mt-4 bg-green-600 text-white font-medium py-2 px-5 rounded-lg hover:bg-green-700 transition duration-300 ease-in-out shadow-md">
+                Restart Quiz
+            </button>
+        </div>
+<script src="script.js"></script>
+
 </body>
-
 
 </html>
