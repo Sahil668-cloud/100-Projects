@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+    @apply bg-gray-200 text-[#2D3748] text-lg font-semibold rounded-lg py-3 hover:bg-[#3182CE] hover:text-white transition;
+}
+
+.btn-operator {
+    @apply bg-[#3182CE] text-white text-lg font-bold rounded-lg py-3 hover:bg-blue-600 transition;
+}
+
+.btn-equal {
+    @apply bg-green-500 text-white text-lg font-bold rounded-lg py-3 hover:bg-green-600 transition;
+}
+
+.btn-clear {
+    @apply bg-red-500 text-white text-lg font-bold rounded-lg py-3 hover:bg-red-600 transition;
+}
+
+body::-webkit-scrollbar{
+    width: 0;
+}
