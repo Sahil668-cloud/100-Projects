@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    
+</head>
+
+<body>
+    <!-- ✅ Header Section -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-[1400px] mx-auto px-6 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-[#0161cf] cursor-pointer">
+                OfficeLogo
+            </div>
+
+            <!-- Nav Links (hidden on mobile) -->
+            <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                <a href="#home" class="hover:text-[#0161cf] transition">Home</a>
+                <a href="#about" class="hover:text-[#0161cf] transition">About</a>
+                <a href="#services" class="hover:text-[#0161cf] transition">Services</a>
+                <a href="#contact" class="hover:text-[#0161cf] transition">Contact</a>
+            </nav>
+
+            <!-- CTA Button (hidden on mobile) -->
+            <div class="hidden md:block">
+                <button class="bg-[#0161cf] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Get Started
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                    <!-- Hamburger Icon -->
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <nav class="flex flex-col space-y-4 px-6 py-4 text-gray-700 font-medium">
+                <a href="#home" class="hover:text-[#0161cf] transition">Home</a>
+                <a href="#about" class="hover:text-[#0161cf] transition">About</a>
+                <a href="#services" class="hover:text-[#0161cf] transition">Services</a>
+                <a href="#contact" class="hover:text-[#0161cf] transition">Contact</a>
+                <button class="bg-[#0161cf] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Get Started
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- ✅ Hero Section -->
+    <section id="#home" class="bg-[#0161cf] text-white">
+        <div class="max-w-[1400px] mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Left Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                    Empower Your <span class="text-yellow-300">Office Growth</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200">
+                    Build smarter solutions, increase productivity, and bring your office into the future with our
+                    modern tools.
+                </p>
+                <div class="space-y-3 sm:space-x-3">
+                    <button
+                        class="bg-white text-[#0161cf] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Get Started
+                    </button>
+                    <button
+                        class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0161cf] transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="flex justify-center md:justify-center">
+                <img loading="lazy" src="https://i.pinimg.com/736x/11/14/23/111423e0fba0210216bfa8846edbda8a.jpg"
+                    alt="Office Illustration" class="rounded-xl shadow-lg w-[60vh]">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ✅ Services Section -->
+    <section id="services" class="bg-white py-20">
+        <div class="max-w-[1400px] mx-auto px-6">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-[#0161cf]">Our Services</h2>
+                <p class="text-lg text-[#718096] mt-4">
+                    We provide top-notch solutions to help your office grow smarter and faster.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Service Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+                    <div class="text-[#0161cf] mb-4">
+                        <!-- Example icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto md:mx-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.104 0-2 .672-2 1.5v5c0 .828.896 1.5 2 1.5s2-.672 2-1.5v-5c0-.828-.896-1.5-2-1.5zM6 10v4m12-4v4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#2D3748] mb-2">Secure Solutions</h3>
+                    <p class="text-[#718096]">
+                        Protect your business with our advanced and reliable security systems.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+                    <div class="text-[#0161cf] mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto md:mx-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1 4h1m-1-4h-1m-2-4h6m2-2H8m8 0a2 2 0 00-2-2H10a2 2 0 00-2 2m8 0a2 2 0 012 2v10a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#2D3748] mb-2">Smart Automation</h3>
+                    <p class="text-[#718096]">
+                        Save time and resources by automating repetitive office tasks efficiently.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+                    <div class="text-[#0161cf] mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto md:mx-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 7v4h6V7H3zm0 6v4h6v-4H3zm8 0v4h6v-4h-6zm0-6v4h6V7h-6zm8 0v4h2V7h-2zm0 6v4h2v-4h-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#2D3748] mb-2">Data Management</h3>
+                    <p class="text-[#718096]">
+                        Organize, store, and manage office data with high efficiency and reliability.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ✅ About Section -->
+    <section id="about" class="bg-gray-50 py-20">
+        <div class="max-w-[1400px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Left Image -->
+            <div class="flex justify-center md:justify-start">
+                <img src="https://i.pinimg.com/736x/eb/75/b1/eb75b12bf1160d6d6c27fdd9d6231e5b.jpg" alt="About Us"
+                    class="rounded-xl shadow-lg">
+            </div>
+
+            <!-- Right Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <h2 class="text-4xl font-bold text-[#2D3748]">About Us</h2>
+                <p class="text-lg text-[#718096] leading-relaxed">
+                    We are dedicated to transforming office environments with cutting-edge
+                    solutions. Our team is passionate about building smarter, faster, and
+                    more secure systems to empower businesses worldwide.
+                </p>
+                <p class="text-lg text-[#718096] leading-relaxed">
+                    With years of experience in automation, security, and data management,
+                    we ensure your office is ready for the future.
+                </p>
+                <button class="bg-[#0161cf] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                    Learn More
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ✅ Social Proof Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-[1400px] mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-[#2D3748]">What Our Clients Say</h2>
+                <p class="text-lg text-[#718096] mt-4">
+                    Trusted by professionals and businesses worldwide.
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+                    <p class="text-[#2D3748] italic mb-6">
+                        “This service completely changed how we manage our office. Secure, fast, and reliable!”
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.pinimg.com/736x/15/77/4e/15774e866b7341bc04301e933e9b3860.jpg"
+                            alt="Client 1" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-[#2D3748]">Jane Doe</h4>
+                            <p class="text-[#718096] text-sm">CEO, BrightTech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+                    <p class="text-[#2D3748] italic mb-6">
+                        “The automation tools saved us countless hours every week. Highly recommend!”
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.pinimg.com/736x/58/19/54/581954d7ea43d6dbc9f32377635a186b.jpg"
+                            alt="Client 2" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-[#2D3748]">Mark Wilson</h4>
+                            <p class="text-[#718096] text-sm">Operations Manager, OfficePro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+                    <p class="text-[#2D3748] italic mb-6">
+                        “Data management is smoother than ever. The team support was amazing too!”
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://i.pinimg.com/1200x/17/ba/cf/17bacf25ed3ee58de02aef1cc69aeee4.jpg"
+                            alt="Client 3" class="w-14 h-14 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-semibold text-[#2D3748]">Sophia Lee</h4>
+                            <p class="text-[#718096] text-sm">CTO, DataFlow</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ✅ CTA Section -->
+    <section id="contact" class="bg-[#0161cf] py-20">
+        <div class="max-w-[1400px] mx-auto px-6 text-center text-white space-y-6">
+
+            <!-- CTA Heading -->
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                Ready to Transform Your Office?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+                Join thousands of businesses already boosting productivity with our smart solutions.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <button class="bg-white text-[#0161cf] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    Get Started
+                </button>
+                <button
+                    class="border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#0161cf] transition">
+                    Contact Us
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ✅ Footer -->
+    <footer class="bg-[#2D3748] text-white">
+        <div class="max-w-[1400px] mx-auto px-6 py-16 grid gap-10 md:grid-cols-4">
+
+            <!-- Brand -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">OfficePro</h3>
+                <p class="text-gray-400">
+                    Empowering businesses with secure, smart, and future-ready solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-[#3182CE] transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-[#3182CE] transition">About</a></li>
+                    <li><a href="#services" class="hover:text-[#3182CE] transition">Services</a></li>
+                    <li><a href="#contact" class="hover:text-[#3182CE] transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="" class="hover:text-[#3182CE] transition">Secure Solutions</a></li>
+                    <li><a href="" class="hover:text-[#3182CE] transition">Smart Automation</a></li>
+                    <li><a href="" class="hover:text-[#3182CE] transition">Data Management</a></li>
+                    <li><a href="" class="hover:text-[#3182CE] transition">Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                <p class="text-gray-400">123 Business Street<br>New Delhi, India</p>
+                <p class="text-gray-400 mt-2">Email: info@officepro.com</p>
+                <p class="text-gray-400">Phone: +91 98765 43210</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 py-6 text-center text-gray-400">
+            <div class="flex flex-col md:flex-row justify-center items-center max-w-[1400px] mx-auto px-6 gap-4">
+                <p>© 2025 OfficePro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
