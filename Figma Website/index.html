@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
+            <h1 class="text-2xl font-bold text-[#3182CE]">MyBrand</h1>
+            <nav class="hidden md:flex gap-6">
+                <a href="#" class="hover:text-[#3182CE]">Home</a>
+                <a href="#" class="hover:text-[#3182CE]">Services</a>
+                <a href="#" class="hover:text-[#3182CE]">About</a>
+                <a href="#" class="hover:text-[#3182CE]">Contact</a>
+            </nav>
+            <button class="md:hidden text-[#3182CE]">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-[#F7FAFC] py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to My Website</h2>
+            <p class="text-lg text-gray-600 mb-6">A simple and clean landing page built with Tailwind CSS.</p>
+            <a href="#" class="bg-[#3182CE] text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">Get
+                Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-8">Our Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white shadow rounded-lg hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-[#3182CE] mb-2">Service One</h4>
+                    <p class="text-gray-600">We provide amazing solutions for your business needs.</p>
+                </div>
+                <div class="p-6 bg-white shadow rounded-lg hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-[#3182CE] mb-2">Service Two</h4>
+                    <p class="text-gray-600">Professional and clean designs for modern websites.</p>
+                </div>
+                <div class="p-6 bg-white shadow rounded-lg hover:shadow-lg transition">
+                    <h4 class="text-xl font-semibold text-[#3182CE] mb-2">Service Three</h4>
+                    <p class="text-gray-600">We build responsive, fast, and secure applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-[#F7FAFC] py-16">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="https://unsection.b-cdn.net/cf-ce0beeea-7c4c-41c0-23b9-1031ad122200.jpg" alt="About" class="rounded-lg shadow">
+            </div>
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">About Us</h3>
+                <p class="text-gray-600 mb-4">We are a passionate team dedicated to delivering the best digital
+                    solutions. Our
+                    mission is to provide value and quality to our clients.</p>
+                <a href="#"
+                    class="bg-[#3182CE] text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition">Learn
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 text-center">
+        <h3 class="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+        <p class="text-gray-600 mb-6">Join us today and grow your business with ease.</p>
+        <a href="#" class="bg-[#E53E3E] text-white px-8 py-3 rounded-lg shadow hover:bg-red-600 transition">Contact
+            Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p>&copy; 2025 MyBrand. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
