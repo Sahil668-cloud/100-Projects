@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>
+        Press any keys from:
+        A, S, D, F, G, H, J, K
+    </h1>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            console.log("Key pressed:", e.key);   // e.key gives the actual key (like "a", "Enter")
+            // console.log("Key code:", e.code);     // e.code gives the physical key (like "KeyA", "Enter")
+            if (e.key === " ") {
+                let audio = new Audio(`music/Space.mp3`)
+                audio.play()
+            } else {
+                try {
+                    let audio = new Audio(`music/${e.key}.mp3`); // your file path
+                    audio.play();
+                }catch{
+                    console.log("sorry");
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
