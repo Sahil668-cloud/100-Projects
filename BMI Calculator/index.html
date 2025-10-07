@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="card p-8 rounded-xl w-full">
+        <h1 class="text-3xl font-extrabold text-white mb-2 text-center">
+            BMI Calculator
+        </h1>
+        <p class="text-sm text-blue-300 mb-6 text-center">
+            Calculate your Body Mass Index (Metric Units)
+        </p>
+
+        <!-- Input Fields -->
+        <div class="space-y-5 mb-8">
+            <input 
+                type="number" 
+                id="weight" 
+                placeholder="Weight (kg) e.g., 70" 
+                class="app-input" 
+                inputmode="decimal"
+                autocomplete="off" 
+                autocorrect="off"
+                data-unit="kg"
+            />
+            <input 
+                type="number" 
+                id="height" 
+                placeholder="Height (cm) e.g., 175" 
+                class="app-input" 
+                inputmode="decimal"
+                autocomplete="off" 
+                autocorrect="off"
+                data-unit="cm"
+            />
+        </div>
+
+        <!-- Calculation Button -->
+        <button 
+            id="calculateBtn" 
+            class="btn-primary w-full text-white font-bold py-3 rounded-lg uppercase tracking-wider"
+        >
+            Calculate BMI
+        </button>
+
+        <!-- Result Display Area -->
+        <div id="result-container" class="mt-8 pt-6 border-t border-gray-700 hidden">
+            <div class="text-center">
+                <p id="bmi-value" class="text-5xl font-extrabold text-blue-400 mb-2">--</p>
+                <p id="category-text" class="text-xl font-semibold text-white mb-4">--</p>
+                <p id="message-box" class="text-sm p-3 rounded-lg text-gray-100 hidden"></p>
+            </div>
+        </div>
+
+        <!-- BMI Category Reference Table -->
+        <div class="mt-8 text-sm text-gray-400">
+            <h3 class="font-bold text-gray-200 mb-2">BMI Categories:</h3>
+            <ul class="space-y-1">
+                <li class="flex justify-between"><span>Underweight:</span> <span>< 18.5</span></li>
+                <li class="flex justify-between"><span>Normal Weight:</span> <span>18.5 - 24.9</span></li>
+                <li class="flex justify-between"><span>Overweight:</span> <span>25.0 - 29.9</span></li>
+                <li class="flex justify-between"><span>Obesity:</span> <span>$\ge$ 30.0</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', calculateBMI);
+
+        function calculateBMI() {
+            const weightInput = document.getElementById('weight');
+            const heightInput = document.getElementById('height');
+            const resultContainer = document.getElementById('result-container');
+            const bmiValueDisplay = document.getElementById('bmi-value');
+            const categoryTextDisplay = document.getElementById('category-text');
+            const messageBox = document.getElementById('message-box');
+
+            // 1. Get and validate inputs
+            const weight = parseFloat(weightInput.value);
+            const heightCm = parseFloat(heightInput.value);
+
+            // Hide previous results
+            resultContainer.classList.add('hidden');
+            messageBox.classList.add('hidden');
+
+            if (isNaN(weight) || isNaN(heightCm) || weight <= 0 || heightCm <= 0) {
+                messageBox.textContent = "Please enter valid, positive values for both weight and height.";
+                messageBox.className = 'text-sm p-3 rounded-lg bg-red-800 text-white';
+                messageBox.classList.remove('hidden');
+                return;
+            }
+
+            // 2. Calculation (Metric: BMI = kg / (m^2))
+            const heightM = heightCm / 100; // Convert cm to meters
+            const bmi = weight / (heightM * heightM);
+            const roundedBmi = bmi.toFixed(1);
+
+            // 3. Determine Category
+            let category = "";
+            let colorClass = "";
+
+            if (bmi < 18.5) {
+                category = "Underweight";
+                colorClass = "text-yellow-400";
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                category = "Normal Weight";
+                colorClass = "text-green-400";
+            } else if (bmi >= 25.0 && bmi <= 29.9) {
+                category = "Overweight";
+                colorClass = "text-orange-400";
+            } else {
+                category = "Obesity";
+                colorClass = "text-red-500";
+            }
+            
+            // 4. Display Results
+            bmiValueDisplay.textContent = roundedBmi;
+            categoryTextDisplay.textContent = category;
+            
+            // Apply category color to the BMI value
+            bmiValueDisplay.className = `text-5xl font-extrabold mb-2 ${colorClass}`;
+            
+            resultContainer.classList.remove('hidden');
+
+            // Optional: Provide a confirmation message
+            messageBox.textContent = `Your calculated BMI is ${roundedBmi}.`;
+            messageBox.className = 'text-sm p-3 rounded-lg bg-blue-700 text-white';
+            messageBox.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

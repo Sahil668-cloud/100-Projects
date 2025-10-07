@@ -1,0 +1,54 @@
+
+
+/* Custom Tailwind Configuration and Royal Blue Theme */
+:root {
+    --royal-blue: #4169E1;
+    --dark-navy: #1C2331;
+    --bg-body: #111827;
+    /* Darker background */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+}
+
+.card {
+    max-width: 400px;
+    background-color: var(--dark-navy);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2d3748;
+    /* Slight border for definition */
+}
+
+.btn-primary {
+    background-color: var(--royal-blue);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: #385cdb;
+    /* Slightly darker on hover */
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Input Styling */
+.app-input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #2D3748;
+    border: 2px solid #2D3748;
+    color: #E5E7EB;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.app-input:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+    background-color: #242c38;
+}
