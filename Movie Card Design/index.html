@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flip Movie Card - Responsive</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font and Lucide Icons (used for stars) -->
+     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+</head>
+<body class="bg-gray-800 flex items-center justify-center min-h-screen font-sans p-4" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Responsive Card Container: 
+         w-full on mobile, capped at max-w-80 (20rem) on larger screens to keep it a manageable size. -->
+    <div class="card-container w-full max-w-80 mx-auto">
+        <div class="card-inner">
+
+            <!-- Card Front (Default View) -->
+            <div class="card-face card-front backface-hidden">
+                
+                <div class="mb-4">
+                    <!-- Main Title -->
+                    <h2 class="text-3xl font-extrabold tracking-tight">AVATAR</h2>
+                    <!-- Subtitle / Tagline -->
+                    <p class="text-xs font-medium uppercase mt-0.5 text-blue-200">THE WAY OF WATER</p>
+                    
+                    <!-- Director/Creator -->
+                    <p class="text-sm font-light mt-2 text-blue-100">Directed by James Cameron</p>
+
+                    <!-- Rating and Score (Using inline SVG for stars) -->
+                    <div class="flex items-center justify-center space-x-1 mt-3">
+                        <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                        <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                        <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                        <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                        <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                        <span class="ml-2 text-sm font-semibold text-blue-100">4.9/5</span>
+                    </div>
+
+                    <!-- Genre Tags -->
+                    <div class="flex justify-center space-x-2 mt-4">
+                        <span class="text-xs font-bold py-1 px-3 bg-blue-500 rounded-full text-white shadow-md">SCI-FI</span>
+                        <span class="text-xs font-bold py-1 px-3 bg-orange-500 rounded-full text-white shadow-md">ACTION</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Back (On Hover) -->
+            <div class="card-face card-back backface-hidden p-6 text-left">
+                <!-- Title and Director at the top -->
+                <div class="mb-4">
+                    <h2 class="text-2xl font-extrabold tracking-tight">AVATAR</h2>
+                    <p class="text-xs font-medium uppercase mt-0.5 text-blue-200 mb-2">THE WAY OF WATER</p>
+                    <p class="text-sm font-light text-blue-100">Directed by James Cameron</p>
+                </div>
+
+                <!-- Rating and Tags (Repeated for context) -->
+                <div class="flex items-center space-x-1 mt-2 mb-3">
+                    <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                    <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                    <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                    <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                    <div class="rating-star"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 18.27l-6.18 3.55L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+                    <span class="ml-2 text-sm font-semibold text-blue-100">4.9/5</span>
+                </div>
+                <div class="flex space-x-2 mb-4">
+                    <span class="text-xs font-bold py-0.5 px-2 bg-blue-500 rounded-full text-white">SCI-FI</span>
+                    <span class="text-xs font-bold py-0.5 px-2 bg-orange-500 rounded-full text-white">ACTION</span>
+                </div>
+
+                <!-- Description -->
+                <p class="text-sm font-light text-blue-100 leading-relaxed mb-6">
+                    Jake Sully lives with his new family formed on the planet Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.
+                </p>
+
+                <!-- Cast Section -->
+                <h3 class="text-base font-bold mb-3 uppercase tracking-wider">Cast</h3>
+                <div class="flex space-x-2">
+                    <!-- Circular Cast Avatars -->
+                    <div class="w-8 h-8 rounded-full bg-blue-300 border-2 border-white" title="Sam Worthington"></div>
+                    <div class="w-8 h-8 rounded-full bg-blue-400 border-2 border-white" title="Zoe Saldana"></div>
+                    <div class="w-8 h-8 rounded-full bg-blue-500 border-2 border-white" title="Sigourney Weaver"></div>
+                    <div class="w-8 h-8 rounded-full bg-blue-600 border-2 border-white" title="Stephen Lang"></div>
+                    <div class="w-8 h-8 rounded-full bg-blue-700 border-2 border-white" title="Kate Winslet"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
